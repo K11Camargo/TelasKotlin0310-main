@@ -37,7 +37,7 @@ fun RankdeAlunoMentor() {
     Column(
         modifier = Modifier
             //.align(Alignment.CenterHorizontally)
-            .height(400.dp)
+            .height(290.dp)
             .width(350.dp),
     ) {
 
