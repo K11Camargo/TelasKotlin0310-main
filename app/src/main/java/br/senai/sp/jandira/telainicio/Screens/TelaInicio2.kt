@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import br.senai.sp.jandira.telainicio.R
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -53,6 +54,7 @@ fun TelaInicio2(controleDeNavegacao: NavHostController? = null) {
                 contentDescription = "Mascote")
             Text(
                 text = "StudyFy",
+                fontFamily = Poppins,
                 modifier = Modifier
                     .offset(y = 200.dp)
                     .align(alignment = Alignment.Center),
@@ -65,9 +67,11 @@ fun TelaInicio2(controleDeNavegacao: NavHostController? = null) {
 
         }
         Text(
-            text ="     Antes de começar seu cadastro, \nprecisamos saber se você é aluno ou professor.",
+            text ="     Antes de começar seu cadastro, " +
+                    "\nprecisamos saber se você é aluno ou professor.",
+            fontFamily = Poppins,
             modifier = Modifier
-                .offset(y = 80.dp, x = 30.dp)
+                .offset(y = 80.dp, x = 5.dp)
                 .align(alignment = Alignment.CenterHorizontally),
             fontSize = 20.sp,
             fontWeight = FontWeight.SemiBold)
@@ -84,6 +88,7 @@ fun TelaInicio2(controleDeNavegacao: NavHostController? = null) {
     ){
         Text(
             text = "Você é aluno ou professor?",
+            fontFamily = Poppins,
             modifier = Modifier
                 .align(Alignment.Center)
                 .offset(y=500.dp),
@@ -102,6 +107,7 @@ fun TelaInicio2(controleDeNavegacao: NavHostController? = null) {
         ) {
             Text(
                 text = "Professor",
+                fontFamily = Poppins,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 fontSize = 20.sp,
@@ -124,38 +130,15 @@ fun TelaInicio2(controleDeNavegacao: NavHostController? = null) {
         ) {
             Text(
                 text = "Aluno",
+                fontFamily = Poppins,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 fontSize = 20.sp,
                 letterSpacing = 1.sp
             )
-
-
         }
-
     }
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

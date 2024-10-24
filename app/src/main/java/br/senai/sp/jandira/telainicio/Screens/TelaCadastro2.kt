@@ -42,6 +42,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavHostController
 import br.senai.sp.jandira.telainicio.R
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -66,12 +67,13 @@ fun TelaCadastro2(controleDeNavegacao: NavHostController?= null) {
                 .padding(top = 35.dp)
                 .align(Alignment.CenterHorizontally)
                 .height(200.dp)
-                .width(130.dp)
+                .width(150.dp)
         ) {
             Image(
                 modifier = Modifier
+                    .align(Alignment.TopCenter)
                     .size(140.dp)
-                    .height(150.dp)
+                    .height(100.dp)
                     .width(150.dp),
                 painter = painterResource(id = R.drawable.calabreso2),
                 contentDescription = "Mascote"
@@ -81,6 +83,7 @@ fun TelaCadastro2(controleDeNavegacao: NavHostController?= null) {
                 fontSize = 30.sp,
                 color = Color(0xFF302F2F),
                 text = "Cadastro",
+                fontFamily = Poppins,
                 modifier = Modifier
                     .offset(x = 4.dp, y = 130.dp)
             )
@@ -113,6 +116,7 @@ fun TelaCadastro2(controleDeNavegacao: NavHostController?= null) {
             ) {
                 Text(
                     modifier = Modifier.padding(start = 20.dp, top = 30.dp),
+                    fontFamily = Poppins,
                     fontSize = 23.sp,
                     fontWeight = FontWeight.Medium,
                     color = Color.Black,
@@ -129,6 +133,7 @@ fun TelaCadastro2(controleDeNavegacao: NavHostController?= null) {
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black,
+                    fontFamily = Poppins,
                     text = "Data de nascimento"
                 )
                 Box(
@@ -146,18 +151,21 @@ fun TelaCadastro2(controleDeNavegacao: NavHostController?= null) {
                             modifier = Modifier
                                 .padding(start = 30.dp)
                                 .width(80.dp),
+                            fontFamily = Poppins,
                             text = "Dia"
                         )
                         Text(
                             modifier = Modifier
                                 .padding(start = 130.dp)
                                 .width(80.dp),
+                            fontFamily = Poppins,
                             text = "Mês"
                         )
                         Text(
                             modifier = Modifier
                                 .padding(start = 245.dp)
                                 .width(80.dp),
+                            fontFamily = Poppins,
                             text = "Ano"
                         )
                     }
@@ -224,7 +232,8 @@ fun TelaCadastro2(controleDeNavegacao: NavHostController?= null) {
                             ) {
                                 months.forEach { month ->
                                     DropdownMenuItem(
-                                        text = { Text(month) },
+                                        text = { Text(month)
+                                        },
                                         onClick = {
                                             selectedMonth = month
                                             expandedMonth = false
@@ -267,6 +276,7 @@ fun TelaCadastro2(controleDeNavegacao: NavHostController?= null) {
             ) {
                 Text(
                     text = "Prox. passo",
+                    fontFamily = Poppins,
                     color = Color.Black,
                     letterSpacing = 1.sp
                 )

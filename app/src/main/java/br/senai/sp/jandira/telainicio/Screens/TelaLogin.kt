@@ -26,6 +26,7 @@ import br.senai.sp.jandira.rickandmorty.service.RetrofitFactory
 import br.senai.sp.jandira.telainicio.R
 import br.senai.sp.jandira.telainicio.model.Login
 import br.senai.sp.jandira.telainicio.model.LoginResponse
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -68,6 +69,7 @@ fun TelaLogin(controleDeNavegacao: NavHostController? = null) {
                 fontSize = 30.sp,
                 color = Color(0xFF302F2F),
                 text = "Login",
+                fontFamily = Poppins,
                 modifier = Modifier.offset(x = 10.dp, y = 130.dp)
             )
         }
@@ -103,8 +105,10 @@ fun TelaLogin(controleDeNavegacao: NavHostController? = null) {
                 fontSize = 25.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.Black,
-                text = "Por favor, faça login para continuar"
-            )
+                text = "Por favor, faça login para continuar",
+                fontFamily = Poppins,
+
+                )
 
             OutlinedTextField(
                 trailingIcon = {
@@ -128,7 +132,9 @@ fun TelaLogin(controleDeNavegacao: NavHostController? = null) {
                     unfocusedBorderColor = Color(0xFFFEE101)
                 ),
                 placeholder = {
-                    Text(text = "E-mail", color = Color.Black)
+                    Text(text = "E-mail",
+                        fontFamily = Poppins,
+                        color = Color.Black)
                 }
             )
 
@@ -161,8 +167,10 @@ fun TelaLogin(controleDeNavegacao: NavHostController? = null) {
             Text(
                 modifier = Modifier.padding(top = 10.dp),
                 fontWeight = FontWeight.Light,
-                text = "Esqueceu a senha?"
-            )
+                text = "Esqueceu a senha?",
+                fontFamily = Poppins
+
+                )
 
             Spacer(modifier = Modifier.height(30.dp))
 
@@ -170,8 +178,10 @@ fun TelaLogin(controleDeNavegacao: NavHostController? = null) {
                 Text(
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Black,
-                    text = "Ou cadastre-se com:"
-                )
+                    text = "Ou cadastre-se com:",
+                    fontFamily = Poppins
+
+                    )
                 Image(
                     modifier = Modifier
                         .padding(start = 10.dp)
@@ -246,8 +256,9 @@ fun TelaLogin(controleDeNavegacao: NavHostController? = null) {
                 }
 
                 Text(
-                    modifier = Modifier.offset(x = 90.dp, y = 100.dp),
+                    modifier = Modifier.offset(x = 70.dp, y = 100.dp),
                     fontSize = 15.sp,
+                    fontFamily = Poppins,
                     text = "Não tem uma conta?"
                 )
                 Text(
@@ -256,6 +267,7 @@ fun TelaLogin(controleDeNavegacao: NavHostController? = null) {
                         .clickable { controleDeNavegacao?.navigate("inicio2") },
                     color = Color(0xFFFEE101),
                     fontSize = 15.sp,
+                    fontFamily = Poppins,
                     text = "Cadastre-se"
                 )
             }

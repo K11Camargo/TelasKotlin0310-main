@@ -21,10 +21,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import br.senai.sp.jandira.telainicio.R
+import br.senai.sp.jandira.telainicio.Screens.TelaPerfil
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 @Composable
 fun NomeFoto(){
@@ -58,33 +61,41 @@ fun NomeFoto(){
                 modifier = Modifier
                     .offset(y = -30.dp)
                     .fillMaxWidth()
-                    .height(120.dp)
+                    .height(250.dp)
             ) {
                 Row(
                     modifier = Modifier
-                        .height(30.dp)
+                        .height(35.dp)
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.Center
                 ) {
                     Text(
                         text = "Silvia Santos",
-                        fontSize = 32.sp,
+                        fontFamily = Poppins,
+                        fontSize = 30.sp,
                         fontWeight = FontWeight.Bold
                     )
                 }
 
                 Row(
                     modifier = Modifier
-                        .height(100.dp)
+                        .fillMaxHeight()
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.Center
                 ) {
                     Text(
                         text = "Entrou em 2021",
-                        fontSize = 20.sp
+                        fontFamily = Poppins,
+                        fontSize = 14.sp
                     )
                 }
             }
         }
     }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun NomeFotoPreview() {
+    NomeFoto()
 }

@@ -59,6 +59,7 @@ import br.senai.sp.jandira.rickandmorty.service.RetrofitFactory
 import br.senai.sp.jandira.telainicio.R
 import br.senai.sp.jandira.telainicio.model.Aluno
 import br.senai.sp.jandira.telainicio.model.Materia
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -181,6 +182,7 @@ fun TelaCadastro1(
             Text(
                 fontWeight = FontWeight.Bold,
                 fontSize = 30.sp,
+                fontFamily = Poppins,
                 color = Color(0xFF302F2F),
                 text = "Cadastre-se",
                 modifier = Modifier
@@ -223,6 +225,7 @@ fun TelaCadastro1(
                     fontWeight = FontWeight.Bold,
                     color = Color.Black,
                     text = "Para ter maior desempenho nos seus estudos",
+                    fontFamily = Poppins,
                     modifier = Modifier.padding(bottom = 16.dp)
                 )
 
@@ -268,7 +271,8 @@ fun TelaCadastro1(
                         focusedBorderColor = Color(0xFFE9CE03),
                         unfocusedBorderColor = Color(0xFFE9CE03)
                     ),
-                    label = { Text(text = "Email", color = Color.Black) }
+                    label = { Text(text = "Email",fontFamily = Poppins,
+                        color = Color.Black) }
                 )
                 OutlinedTextField(
                     trailingIcon = {
@@ -289,7 +293,9 @@ fun TelaCadastro1(
                         focusedBorderColor = Color(0xFFE9CE03),
                         unfocusedBorderColor = Color(0xFFE9CE03)
                     ),
-                    label = { Text(text = "Senha", color = Color.Black) }
+                    label = { Text(text = "Senha",
+                        fontFamily = Poppins,
+                        color = Color.Black) }
                 )
                 OutlinedTextField(
                     trailingIcon = {
@@ -310,7 +316,9 @@ fun TelaCadastro1(
                         focusedBorderColor = Color(0xFFE9CE03),
                         unfocusedBorderColor = Color(0xFFE9CE03)
                     ),
-                    label = { Text(text = "Telefone", color = Color.Black) }
+                    label = { Text(text = "Telefone",
+                        fontFamily = Poppins,
+                        color = Color.Black) }
                 )
 
                 Row(
@@ -319,6 +327,7 @@ fun TelaCadastro1(
                 ) {
                     Text(
                         text = "Ou cadastre-se com: ",
+                        fontFamily = Poppins,
                         color = Color.Black
                     )
                     Spacer(modifier = Modifier.width(4.dp))
@@ -331,14 +340,16 @@ fun TelaCadastro1(
                 }
 
                 // Botão "Próx. passo"
-                Spacer(modifier = Modifier.height(20.dp))
                 Column (
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(50.dp),
                     horizontalAlignment = Alignment.End
                 ){
 
                         Text(
                             text = messageErrorState,
+                            fontFamily = Poppins,
                             color = Color.Red,
                             fontSize = (12.sp)
                         )
@@ -375,7 +386,9 @@ fun TelaCadastro1(
                         colors = ButtonDefaults.buttonColors(Color(0xFFFEE101)),
                         modifier = Modifier.align(Alignment.End)
                     ) {
-                        Text(text = "Prox. passo", color = Color.Black, letterSpacing = 1.sp)
+                        Text(text = "Prox. passo",
+                            fontFamily = Poppins,
+                            color = Color.Black, letterSpacing = 1.sp)
                         Icon(
                             imageVector = Icons.Filled.ArrowForward,
                             contentDescription = "",
@@ -401,6 +414,7 @@ fun TelaCadastro1(
                         fontSize = 23.sp,
                         fontWeight = FontWeight.Medium,
                         color = Color.Black,
+                        fontFamily = Poppins,
                         text = "Em que ano você nasceu?"
                     )
                 }
@@ -414,6 +428,7 @@ fun TelaCadastro1(
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color.Black,
+                        fontFamily = Poppins,
                         text = "Data de nascimento"
                     )
                     Box(
@@ -431,18 +446,21 @@ fun TelaCadastro1(
                                 modifier = Modifier
                                     .padding(start = 30.dp)
                                     .width(80.dp),
+                                fontFamily = Poppins,
                                 text = "Dia"
                             )
                             Text(
                                 modifier = Modifier
                                     .padding(start = 130.dp)
                                     .width(80.dp),
+                                fontFamily = Poppins,
                                 text = "Mês"
                             )
                             Text(
                                 modifier = Modifier
                                     .padding(start = 245.dp)
                                     .width(80.dp),
+                                fontFamily = Poppins,
                                 text = "Ano"
                             )
                         }
@@ -548,37 +566,6 @@ fun TelaCadastro1(
                         }
                     }
                 }
-//                Button(
-//                    onClick = {
-//                        // Supondo que dia e meses são MutableState<String>
-//                        if (dia() || meses() || ano.()) {
-//                            erroCadastroInfo = true
-//                            messageErrorState = "Não deve haver campos vazios"
-//                        } else if (dia.value.length > 2) {
-//                            erroCadastroInfo = true
-//                            messageErrorState = "Erro ao cadastrar dia"
-//                        } else {
-//                            etapa3.value = true
-//                        }
-//                        },
-//                    colors = ButtonDefaults.buttonColors(Color(0xFFFEE101)),
-//                    modifier = Modifier
-//                        .offset(x = 160.dp, y = 60.dp)
-//                        .width(180.dp)
-//                        .height(40.dp)
-//                ) {
-//                    Text(
-//                        text = "Prox. passo",
-//                        color = Color.Black,
-//                        letterSpacing = 1.sp
-//                    )
-//                    Icon(
-//                        modifier = Modifier.padding(start = 30.dp),
-//                        imageVector = Icons.Filled.ArrowForward,
-//                        contentDescription = "",
-//                        tint = Color.Black
-//                    )
-//                }
             }
         } else {
             //etapa3
@@ -587,6 +574,7 @@ fun TelaCadastro1(
             Column(modifier = Modifier.padding(20.dp)) {
                 Text(
                     text = "Nos diga 2 matérias que queira estudar.",
+                    fontFamily = Poppins,
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black
@@ -613,6 +601,7 @@ fun TelaCadastro1(
                             )
                             Text(
                                 text = materia.nome_materia,
+                                fontFamily = Poppins,
                                 modifier = Modifier.padding(start = 8.dp)
                             )
                         }
@@ -684,7 +673,9 @@ fun TelaCadastro1(
                     colors = ButtonDefaults.buttonColors(Color(0xFFFEE101)),
                     modifier = Modifier.width(200.dp)
                 ) {
-                    Text(text = "Cadastrar", color = Color.Black, letterSpacing = 1.sp)
+                    Text(text = "Cadastrar",
+                        fontFamily = Poppins,
+                        color = Color.Black, letterSpacing = 1.sp)
                     Icon(
                         imageVector = Icons.Filled.ArrowForward,
                         contentDescription = "",

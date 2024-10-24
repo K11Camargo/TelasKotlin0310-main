@@ -31,6 +31,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.telainicio.R
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 @Composable
 fun EmblemasAlunos(){
@@ -50,10 +51,12 @@ fun EmblemasAlunos(){
         ) {
             Text(text = "Emblemas",
                 fontWeight = FontWeight.Bold,
+                fontFamily = Poppins,
                 fontSize = 30.sp)
 
             Text(text = "Ver todos",
                 fontWeight = FontWeight.Light,
+                fontFamily = Poppins,
                 fontSize = 23.sp)
         }
 
@@ -93,6 +96,7 @@ fun EmblemasAlunos(){
                                 .align(Alignment.BottomCenter)
                                 .height(30.dp),
                             fontWeight = FontWeight.Bold,
+                            fontFamily = Poppins,
                             text = "Nível 1"
                         )
 
@@ -125,6 +129,7 @@ fun EmblemasAlunos(){
                             .align(Alignment.BottomCenter)
                             .height(30.dp),
                         fontWeight = FontWeight.Bold,
+                        fontFamily = Poppins,
                         text = "Nível 1"
                     )
 
@@ -158,6 +163,7 @@ fun EmblemasAlunos(){
                             .align(Alignment.BottomCenter)
                             .height(30.dp),
                         fontWeight = FontWeight.Bold,
+                        fontFamily = Poppins,
                         text = "Nível 1"
                     )
 
@@ -191,6 +197,7 @@ fun EmblemasAlunos(){
                             .align(Alignment.BottomCenter)
                             .height(30.dp),
                         fontWeight = FontWeight.Bold,
+                        fontFamily = Poppins,
                         text = "Nível 1"
                     )
 

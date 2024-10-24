@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavHostController
 import br.senai.sp.jandira.telainicio.R
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -67,12 +68,9 @@ fun TelaCadastroProf(controleDeNavegacao: NavHostController?= null) {
                 painter = painterResource(id = R.drawable.calabreso),
                 contentDescription = "Mascote",
                 modifier = Modifier
-                    .size(130.dp)
-                    .align(Alignment.Center)
-                    .padding(bottom = 20.dp)
+                    .size(180.dp)
+                    .align(Alignment.TopCenter)
             )
-
-
 
 
             Text(
@@ -80,8 +78,9 @@ fun TelaCadastroProf(controleDeNavegacao: NavHostController?= null) {
                 fontSize = 30.sp,
                 color = Color(0xFF302F2F),
                 text = "Cadastre-se",
+                fontFamily = Poppins,
                 modifier = Modifier
-                    .offset(x = 15.dp, y = 150.dp)
+                    .offset(x = 0.dp, y = 170.dp)
             )
         }
 
@@ -107,6 +106,7 @@ fun TelaCadastroProf(controleDeNavegacao: NavHostController?= null) {
         Column(modifier = Modifier.padding(25.dp)) {
             Text(
                 text = "Nos informe se você realmente é um professor",
+                fontFamily = Poppins,
                 fontSize = 25.sp,
                 fontWeight = FontWeight.Normal,
             )
@@ -128,13 +128,14 @@ fun TelaCadastroProf(controleDeNavegacao: NavHostController?= null) {
                     onValueChange = {especializacao = it},
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(16.dp),
-                    label = { Text(text = "especificação", color = Color.Black) },
+                    label = { Text(text = "especificação",
+                        fontFamily = Poppins,
+                        color = Color.Black) },
                     colors = TextFieldDefaults.outlinedTextFieldColors(
                         focusedBorderColor = Color(0xFFFE9CE03),
                         unfocusedBorderColor = Color(0xFFFE9CE03)
                     )
                 )
-                Spacer(modifier = Modifier.height(100.dp))
 
                 Row {
                     Button (
@@ -149,7 +150,9 @@ fun TelaCadastroProf(controleDeNavegacao: NavHostController?= null) {
                         shape = RoundedCornerShape(16.dp),
                     ) {
 
-                        Text(text = "Cadastrar", color = Color.Black)
+                        Text(text = "Cadastrar",
+                            fontFamily = Poppins,
+                            color = Color.Black)
 
                         Spacer(modifier = Modifier.width(10.dp))
 

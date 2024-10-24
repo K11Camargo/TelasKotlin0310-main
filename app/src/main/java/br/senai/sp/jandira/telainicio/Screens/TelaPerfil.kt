@@ -19,6 +19,7 @@ import br.senai.sp.jandira.telainicio.Screens.TelaPerfilRemnants.InformacoesdoAl
 import br.senai.sp.jandira.telainicio.Screens.TelaPerfilRemnants.NomeFoto
 import br.senai.sp.jandira.telainicio.Screens.TelaPerfilRemnants.RankdeAlunoMentor
 import br.senai.sp.jandira.telainicio.Screens.TelaPerfilRemnants.RankdeAlunos
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 @Composable
 fun TelaPerfil() {
@@ -45,6 +46,7 @@ fun TelaPerfil() {
                 modifier = Modifier
                     .padding(top = 10.dp),
                 text = "Perfil",
+                fontFamily = Poppins,
                 fontSize = 20.sp
             )
             Row(
@@ -63,70 +65,28 @@ fun TelaPerfil() {
             }
         }
 
-
-
-                NomeFoto()
-
-
-
-            Spacer(
-                modifier = Modifier
-                    .height(10.dp)
-            )
-
+            NomeFoto()
 
 
             InformacoesdoAluno()
 
 
-
-
-
-
             Spacer(modifier = Modifier.height(40.dp))
-
 
 
             DesempenhodoAluno()
 
 
-
-
-
-
             Spacer(modifier = Modifier.height(60.dp))
-
-
 
 
             RankdeAlunos()
 
 
-
-
             RankdeAlunoMentor()
 
 
-
-
-
-
-
             EmblemasAlunos()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

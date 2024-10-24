@@ -17,8 +17,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.senai.sp.jandira.telainicio.Screens.TelaPerfil
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 @Composable
 fun InformacoesdoAluno(){
@@ -48,10 +51,12 @@ fun InformacoesdoAluno(){
                 ) {
                     Text(
                         text = "Estudando",
+                        fontFamily = Poppins,
                         fontSize = 20.sp
                     )
                     Text(
                         text = "Historia",
+                        fontFamily = Poppins,
                         fontSize = 15.sp
                     )
                 }
@@ -70,6 +75,7 @@ fun InformacoesdoAluno(){
             ) {
                 Text(
                     text = "Aluno/Mentor",
+                    fontFamily = Poppins,
                     fontSize = 18.sp
                 )
             }
@@ -91,10 +97,12 @@ fun InformacoesdoAluno(){
                 ) {
                     Text(
                         text = "Série",
+                        fontFamily = Poppins,
                         fontSize = 20.sp
                     )
                     Text(
                         text = "3º - fundamental 1",
+                        fontFamily = Poppins,
                         fontSize = 15.sp
                     )
                 }
@@ -112,8 +120,9 @@ fun InformacoesdoAluno(){
             ) {
                 Text(
                     text = "Ver grupo de mentoria",
+                    fontFamily = Poppins,
                     color = Color.Black,
-                    fontSize = 13.sp
+                    fontSize = 12.sp
                 )
             }
         }
@@ -135,19 +144,22 @@ fun InformacoesdoAluno(){
                     Text(
                         text = "Assunto no momento",
                         fontWeight = FontWeight.Bold,
+                        fontFamily = Poppins,
                         fontSize = 20.sp
                     )
                     Text(
                         text = "Segunda Guerra Mundial",
+                        fontFamily = Poppins,
                         fontSize = 15.sp
                     )
                 }
             }
         }
     }
+}
 
-
-
-
-
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun InformacoesdoAlunoPreview() {
+    InformacoesdoAluno()
 }

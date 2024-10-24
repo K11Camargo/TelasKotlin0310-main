@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavHostController
 import br.senai.sp.jandira.telainicio.R
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -56,6 +57,7 @@ fun MudarSenha(controleDeNavegacao: NavHostController? = null){
                 fontWeight = FontWeight.ExtraBold,
                 color = Color(0xFF302F2F),
                 fontSize = 30.sp,
+                fontFamily = Poppins,
                 text = "Mudar senha"
             )
         }
@@ -91,6 +93,7 @@ fun MudarSenha(controleDeNavegacao: NavHostController? = null){
                 fontSize = 25.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.Black,
+                fontFamily = Poppins,
                 text = "Insira sua senha atual e altere-a"
             )
 
@@ -108,6 +111,7 @@ fun MudarSenha(controleDeNavegacao: NavHostController? = null){
                     label = {
                         Text(
                             text = "Senha atual",
+                            fontFamily = Poppins,
                             color = Color.Black
                         )
                     },
@@ -128,6 +132,7 @@ fun MudarSenha(controleDeNavegacao: NavHostController? = null){
                     label = {
                         Text(
                             text = "Nova senha",
+                            fontFamily = Poppins,
                             color = Color.Black
                         )
                     },
@@ -148,6 +153,7 @@ fun MudarSenha(controleDeNavegacao: NavHostController? = null){
                     label = {
                         Text(
                             text = "Confirmar senha",
+                            fontFamily = Poppins,
                             color = Color.Black
                         )
                     },
@@ -163,7 +169,7 @@ fun MudarSenha(controleDeNavegacao: NavHostController? = null){
                 )
             }
 
-            Spacer(modifier = Modifier.height(70.dp))
+            Spacer(modifier = Modifier.height(50.dp))
 
             Box(
                 modifier = Modifier
@@ -186,16 +192,11 @@ fun MudarSenha(controleDeNavegacao: NavHostController? = null){
                     ) {
                         Text(
                             text = "Mudar senha",
+                            fontFamily = Poppins,
                             fontSize = 19.sp,
                             color = Color.Black
                         )
 
-                        Icon(
-                            imageVector = Icons.Filled.ArrowForward,
-                            contentDescription = "",
-                            tint = Color.Black,
-                            modifier = Modifier.size(24.dp)
-                        )
                     }
                 }
             }

@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.fontResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -26,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import br.senai.sp.jandira.telainicio.R
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -53,6 +55,7 @@ fun TelaInicio(controleDeNavegacao: NavHostController? = null) {
                 contentDescription = "Mascote")
             Text(
                 text = "StudyFy",
+                fontFamily = Poppins,
                 modifier = Modifier
                     .offset(y = 200.dp)
                     .align(alignment = Alignment.Center),
@@ -68,6 +71,7 @@ fun TelaInicio(controleDeNavegacao: NavHostController? = null) {
             text = "        Bem-vindo ao StudyFY, a " +
                     "\nplataforma de ensino online para" +
                     " \n         alunos e professores",
+            fontFamily = Poppins,
             modifier = Modifier
                 .offset(y = 80.dp)
                 .align(alignment = Alignment.CenterHorizontally),
@@ -96,6 +100,7 @@ fun TelaInicio(controleDeNavegacao: NavHostController? = null) {
         ) {
             Text(
                 text = "Próximo passo",
+                fontFamily = Poppins,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 fontSize = 20.sp,
@@ -104,22 +109,6 @@ fun TelaInicio(controleDeNavegacao: NavHostController? = null) {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

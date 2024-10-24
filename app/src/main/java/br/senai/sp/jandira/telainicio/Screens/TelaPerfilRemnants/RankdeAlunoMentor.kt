@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.telainicio.R
 import br.senai.sp.jandira.telainicio.Screens.TelaPerfil
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 @Composable
 fun RankdeAlunoMentor() {
@@ -37,22 +38,23 @@ fun RankdeAlunoMentor() {
     Column(
         modifier = Modifier
             //.align(Alignment.CenterHorizontally)
-            .height(290.dp)
+            .height(310.dp)
             .width(350.dp),
     ) {
 
         Column(
             modifier = Modifier
-                .height(290.dp)
+                .height(370.dp)
                 .width(360.dp)
         ) {
             Row(
                 modifier = Modifier
-                    .width(200.dp)
-                    .height(50.dp)
+                    .width(250.dp)
+                    .height(70.dp)
             ) {
                 Text(
                     text = "Rank - mentor",
+                    fontFamily = Poppins,
                     fontSize = 30.sp,
                     fontWeight = FontWeight.Bold
                 )
@@ -112,6 +114,7 @@ fun RankdeAlunoMentor() {
 
                         Text(
                             text = "(130 avaliações)",
+                            fontFamily = Poppins,
                             fontSize = 12.sp,
                             modifier = Modifier.align(Alignment.CenterHorizontally)
                         )
@@ -350,6 +353,7 @@ fun RankdeAlunoMentor() {
                         Text(
                             //NUMERO DE PESSOAS AJUDADAS VINDO DO BANCO
                             text = "150 Pessoas ajudadas",
+                            fontFamily = Poppins,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.align(Alignment.CenterHorizontally)
                         )

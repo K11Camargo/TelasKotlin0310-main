@@ -31,6 +31,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.telainicio.R
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 import org.w3c.dom.Text
 import java.time.format.TextStyle
 
@@ -53,8 +54,6 @@ fun TelaEsqueciASenha() {
             Image(
                 modifier = Modifier
                     .size(height = 113.dp, width = 98.dp),
-
-
                 painter = painterResource(id = R.drawable.calabreso2),
                 contentDescription = "Calabreso"
             )
@@ -74,20 +73,27 @@ fun TelaEsqueciASenha() {
                         fontSize = 35.sp,
                         fontWeight = FontWeight.Bold,
                         text = "Esqueceu sua senha? Não se preocupe!",
-                    )
+                        fontFamily = Poppins,
+                        )
                     Spacer(modifier = Modifier.padding(10.dp))
 
 
                     Text( fontSize = 20.sp,
-                        text = "Informe seu email para que \npossamos enviar a sua senha \ne digite o código recebido"
-                    )
+                        text = "Informe seu email para que " +
+                                "\npossamos enviar a sua senha " +
+                                "\ne digite o código recebido",
+                        fontFamily = Poppins
+                        )
 
 
                     Spacer(modifier = Modifier.padding(10.dp))
+
                     OutlinedTextField(
                         value = "",
                         onValueChange = { /*TODO*/ },
-                        label = { Text("Informe o E-mail cadastrado") },
+                        label = { Text(
+                            "Informe o E-mail cadastrado",
+                            fontFamily = Poppins) },
                         colors = OutlinedTextFieldDefaults.colors(
                             focusedBorderColor = Color(0xFFFE9CE03), // Cor daborda quando o campo está focado
                             unfocusedBorderColor = Color(0xFFFE9CE03) // Cor da borda quando o campo não está focado
@@ -97,13 +103,16 @@ fun TelaEsqueciASenha() {
 
 
                     Spacer(modifier = Modifier.padding(10.dp))
+
                     Row {
                         OutlinedTextField( modifier = Modifier
                             .width(160.dp)
                             .height(50.dp),
                             value = "",
                             onValueChange = { /*TODO*/ },
-                            label = { Text(text = "Insira o código aqui") },
+                            label = { Text(
+                                text = "Insira o código aqui",
+                                fontFamily = Poppins) },
                             colors = OutlinedTextFieldDefaults.colors(
                                 focusedBorderColor = Color(0xFFFE9CE03), // Cor daborda quando o campo está focado
                                 unfocusedBorderColor = Color(0xFFFE9CE03) // Cor da borda quando o campo não está focado
@@ -119,6 +128,7 @@ fun TelaEsqueciASenha() {
                             colors = ButtonDefaults.buttonColors(Color(0xFFFE9CE03))
                         ){
                             Text(text = "Enviar e-mail",
+                                fontFamily = Poppins,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 15.sp
@@ -128,17 +138,20 @@ fun TelaEsqueciASenha() {
 
 
                     Spacer(modifier = Modifier.padding(75.dp))
+
                     Button(onClick = { /*TODO*/ },
                         modifier = Modifier.padding(5.dp).height(50.dp).width(200.dp).align(Alignment.CenterHorizontally),
                         colors = ButtonDefaults.buttonColors(Color(0xFFFE9CE03))
                     ){
                         Text(text = "Recuperar senha",
+                            fontFamily = Poppins,
                             color = Color.Black,
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.sp
                         )
                     }
                     Text(text = "Voltar a tela de login",
+                        fontFamily = Poppins,
                         fontWeight = FontWeight.Medium,
                         modifier = Modifier.
                         align(Alignment.CenterHorizontally)
@@ -148,12 +161,6 @@ fun TelaEsqueciASenha() {
         }
     }
 }
-
-
-
-
-
-
 
 
 @Preview(showBackground = true, showSystemUi = true)

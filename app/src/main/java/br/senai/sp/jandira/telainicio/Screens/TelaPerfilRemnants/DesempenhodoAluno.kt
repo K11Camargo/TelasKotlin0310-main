@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.telainicio.R
 import br.senai.sp.jandira.telainicio.Screens.TelaPerfil
+import br.senai.sp.jandira.telainicio.ui.theme.Poppins
 
 @Composable
 fun DesempenhodoAluno() {
@@ -36,6 +37,7 @@ fun DesempenhodoAluno() {
     ) {
         Text(
             text = "Desempenho",
+            fontFamily = Poppins,
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold
         )
@@ -87,9 +89,11 @@ fun DesempenhodoAluno() {
                                 modifier = Modifier
                                     .padding(top = 5.dp),
                                 fontSize = 18.sp,
+                                fontFamily = Poppins,
                                 text = "Rank recorde"
                             )
-                            Text(text = "Ouro ||")
+                            Text(text = "Ouro ||",
+                                fontFamily = Poppins,)
                         }
                     }
                 }
@@ -132,9 +136,11 @@ fun DesempenhodoAluno() {
                                 modifier = Modifier
                                     .padding(top = 5.dp),
                                 fontSize = 18.sp,
+                                fontFamily = Poppins,
                                 text = "Pontos"
                             )
-                            Text(text = "210")
+                            Text(text = "210",
+                                fontFamily = Poppins,)
                         }
                     }
                 }
@@ -177,12 +183,12 @@ fun DesempenhodoAluno() {
                                 .fillMaxHeight()
                         ) {
                             Text(
-                                modifier = Modifier
-                                    .padding(top = 5.dp),
-                                fontSize = 18.sp,
+                                fontSize = 16.sp,
+                                fontFamily = Poppins,
                                 text = "Sem parar!"
                             )
-                            Text(text = "14 dias")
+                            Text(text = "14 dias",
+                                fontFamily = Poppins,)
                         }
                         Box(
                             modifier = Modifier
@@ -224,12 +230,12 @@ fun DesempenhodoAluno() {
                                 .height(40.dp)
                         ) {
                             Text(
-                                modifier = Modifier
-                                    .padding(top = 5.dp),
-                                fontSize = 17.sp,
+                                fontSize = 16.sp,
+                                fontFamily = Poppins,
                                 text = "Atividades feitas"
                             )
-                            Text(text = "20")
+                            Text(text = "20",
+                                fontFamily = Poppins,)
                         }
                     }
                 }
